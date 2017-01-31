@@ -1,0 +1,14 @@
+{
+	"category" : "OSShell",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OSShell",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
