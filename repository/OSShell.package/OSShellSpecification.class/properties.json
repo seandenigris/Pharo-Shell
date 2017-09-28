@@ -1,14 +1,11 @@
 {
-	"category" : "OSShell-Specification",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "OSShellSpecification",
-	"pools" : [
-		 ],
 	"super" : "BabyPhexample",
-	"type" : "normal" }
+	"category" : "OSShell-Specification",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OSShellSpecification",
+	"type" : "normal"
+}

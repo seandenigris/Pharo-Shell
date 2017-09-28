@@ -1,9 +1,0 @@
-{
-	"class" : {
-		"initialize" : "SeanDeNigris 1/30/2017 23:26" },
-	"instance" : {
-		"command:" : "SeanDeNigris 1/30/2017 23:13",
-		"isObsolete" : "SeanDeNigris 1/31/2017 09:54",
-		"open:" : "SeanDeNigris 1/30/2017 23:23",
-		"runExternally:" : "SeanDeNigris 6/1/2017 12:09",
-		"waitForCommand:" : "SeanDeNigris 1/30/2017 23:12" } }
