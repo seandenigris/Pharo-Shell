@@ -1,3 +1,3 @@
 running
 run
-	^ Smalltalk tools shell command: self command
+	^ Smalltalk tools shell new command: self command

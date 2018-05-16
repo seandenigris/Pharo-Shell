@@ -1,4 +1,6 @@
 *OSShell
 open: aUrl
 
-	^ self shellExecute: 'open' file: aUrl asString parameters: '' directory: '' show: 5 "SW_SHOW"
+	| winSW_SHOW |
+	winSW_SHOW := 5.
+	^ self shellExecute: 'open' file: aUrl asString parameters: '' directory: '' show: winSW_SHOW

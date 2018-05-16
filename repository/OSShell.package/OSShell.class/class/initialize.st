@@ -1,3 +1,3 @@
 class initialization
 initialize
-	Smalltalk tools register: self new as: #shell
+	Smalltalk tools register: self as: #shell
