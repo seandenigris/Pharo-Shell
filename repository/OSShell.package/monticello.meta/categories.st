@@ -1,2 +1,2 @@
 SystemOrganization addCategory: #OSShell!
-SystemOrganization addCategory: 'OSShell-Specification'!
+SystemOrganization addCategory: #'OSShell-Specification'!
