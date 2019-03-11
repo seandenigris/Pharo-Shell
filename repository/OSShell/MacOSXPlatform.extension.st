@@ -1,5 +1,15 @@
-*OSShell
-runExternally: aCommand
+Extension { #name : #MacOSXPlatform }
+
+{ #category : #'*OSShell' }
+MacOSXPlatform >> open: aUrl [
+
+	| openCommand |
+	openCommand := 'open "{1}"' format: { aUrl asString }.
+	self system: openCommand
+]
+
+{ #category : #'*OSShell' }
+MacOSXPlatform >> runExternally: aCommand [
 
 	| command scriptTemplate script |
 	scriptTemplate := 'tell application "Terminal"
@@ -11,3 +21,4 @@ end tell'.
 		f writeStreamDo: [ :s | s nextPutAll: script ].
 		command := 'osascript "{1}"' format: { f fullName }.
 		self system: command ]
+]
