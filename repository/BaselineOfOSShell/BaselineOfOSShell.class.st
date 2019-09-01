@@ -1,7 +1,7 @@
 Class {
 	#name : #BaselineOfOSShell,
 	#superclass : #BaselineOf,
-	#category : 'BaselineOfOSShell'
+	#category : #BaselineOfOSShell
 }
 
 { #category : #baselines }
@@ -10,6 +10,6 @@ BaselineOfOSShell >> baseline: spec [
 
 	spec for: #'common' do: [
 		spec baseline: 'BabyPhexample' with: [
-				spec repository: 'github://seandenigris/Baby-Phexample:master/repository' ].
+				spec repository: 'github://seandenigris/Baby-Phexample' ].
 		spec package: #'OSShell' ].
 ]
