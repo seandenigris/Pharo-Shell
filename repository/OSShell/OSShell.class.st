@@ -11,12 +11,22 @@ OSShell class >> initialize [
 
 { #category : #'running-OSProcess' }
 OSShell >> command: aString [
-	^ OSPlatform current system: aString, ' &'
+	^ self platform system: aString, ' &'
 ]
 
 { #category : #opening }
 OSShell >> open: aString [
-	^ OSPlatform current open: aString
+	^ self platform open: aString
+]
+
+{ #category : #'as yet unclassified' }
+OSShell >> outputOf: aString [ 
+	^ LibC resultOfCommand: aString
+]
+
+{ #category : #'running-OSProcess' }
+OSShell >> platform [
+	^ OSPlatform current
 ]
 
 { #category : #running }
@@ -38,5 +48,5 @@ OSShell >> runExternally: aCommand [
 
 { #category : #'running-OSProcess' }
 OSShell >> waitForCommand: aString [
-	^ OSPlatform current system: aString
+	^ self platform system: aString
 ]
