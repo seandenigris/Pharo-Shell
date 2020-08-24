@@ -11,14 +11,15 @@ MacOSXPlatform >> open: aUrl [
 { #category : #'*OSShell' }
 MacOSXPlatform >> runExternally: aCommand [
 
-	| command scriptTemplate script |
+	| command scriptTemplate script safeCommand |
 	scriptTemplate := 'tell application "Terminal"
 	activate
   do script "{script}"
 end tell'.
-	script := scriptTemplate format: { #script -> aCommand } asDictionary.
+	safeCommand := aCommand copyReplaceAll: '"' with: '\"'.
+	script := scriptTemplate format: { #script -> safeCommand } asDictionary.
 	Tempfile do: [ :f |
-		f writeStreamDo: [ :s | s nextPutAll: script ].
+		f ensureCreateFile writeStreamDo: [ :s | s nextPutAll: script ].
 		command := 'osascript "{1}"' format: { f fullName }.
 		self system: command ]
 ]
