@@ -14,6 +14,14 @@ OSShell >> command: aString [
 	^ self platform system: aString, ' &'
 ]
 
+{ #category : #accessing }
+OSShell >> ensureSucceeds: aString [
+	"Should we add this to the API or is there not enough value?"
+	| exitStatus |
+	exitStatus := self runAndWait: aString.
+	self assert: exitStatus equals: 0
+]
+
 { #category : #opening }
 OSShell >> open: aString [
 	^ self platform open: aString
