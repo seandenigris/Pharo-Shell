@@ -9,7 +9,8 @@ BaselineOfOSShell >> baseline: spec [
 	<baseline>
 
 	spec for: #'common' do: [
-		spec baseline: 'BabyPhexample' with: [
-				spec repository: 'github://seandenigris/Baby-Phexample' ].
-		spec package: #'OSShell' ].
+		spec baseline: 'Mocketry' with: [
+				spec repository: 'github://dionisiydk/Mocketry' ].
+		spec package: #'OSShell' with: [
+				spec requires: #('Mocketry' ) ] ].
 ]

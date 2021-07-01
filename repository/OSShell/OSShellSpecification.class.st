@@ -1,7 +1,7 @@
 Class {
 	#name : #OSShellSpecification,
-	#superclass : #BabyPhexample,
-	#category : 'OSShell-Specification'
+	#superclass : #TestCase,
+	#category : #'OSShell-Specification'
 }
 
 { #category : #tests }
