@@ -9,21 +9,21 @@ BaselineOfOSShell >> baseline: spec [
 	<baseline>
 
 	spec for: #'common' do: [
-		spec baseline: 'Mocketry' with: [
+		spec baseline: #'Mocketry' with: [
 				spec repository: 'github://dionisiydk/Mocketry' ].
 		spec 
 			package: #'OSShell' with: [
-				spec requires: #('Mocketry') ] ].
+				spec requires: #(Mocketry) ] ].
 			
 	spec for: #notGToolkit do: [ 
 		spec 
-			package: #'OSShell-Pharo' with: [ spec requires: #('OSShell') ];
-			package: 'OSShell' with: [ spec includes: #('OSShell-Pharo') ] ].
+			package: #'OSShell-Pharo' with: [ spec requires: #(OSShell) ];
+			package: #'OSShell' with: [ spec includes: #(#'OSShell-Pharo') ] ].
 			
 	spec for: #GToolkit do: [ 
 		spec 
-			package: 'OSShell-GToolkit' with: [ spec requires: #('OSShell') ];
-			package: 'OSShell' with: [ spec includes: #('OSShell-GToolkit') ] ]
+			package: #'OSShell-GToolkit' with: [ spec requires: #(OSShell) ];
+			package: #'OSShell' with: [ spec includes: #(#'OSShell-GToolkit') ] ]
 ]
 
 { #category : #accessing }
